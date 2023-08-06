@@ -26,7 +26,7 @@ player.setCurrentTime(secondPlay).then(function(seconds) {
   }
 });
 
-player.on('pause', throttle(onPlay, 1000));
+player.on('timeupdate', throttle(onPlay, 1000));
 
 player.getVideoTitle().then(function(title) {
     console.log('title:', title);
